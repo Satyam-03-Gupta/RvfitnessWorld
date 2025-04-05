@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading">Welcome To <span style="color: #e32219;">RV FITNESS WORLD</span></h1>
+    <div class="bodypart">
+        <div class="loginpages">
+            <div class="side1">
+                <h1>Log In to Your Account</h1>
+                <% if (typeof error !== 'undefined') { %>
+                    <p style="color: red;"><%= error %></p>
+                <% } %>
+                <form action="/login" method="post">
+                    <input class="" type="text" name="email" placeholder="email" required>
+                    <input class="" type="password" name="password" placeholder="password" required>
+                    <input class="sucessful" type="submit" value="login"></input>
+                    <p>Not a member? <a href="/createuser">Signup now</a></p>
+                </form>
+            </div>
+            <div class="side2">
+                <img src="/photos/login-page.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <h1 class="thanks">SHUKRIYA❤️</span></h1>   
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

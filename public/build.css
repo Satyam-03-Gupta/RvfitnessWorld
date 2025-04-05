@@ -1,0 +1,357 @@
+header {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  position: relative;
+  z-index: 0;
+  margin: 80px 10px;
+}
+
+.build-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  object-fit: cover;
+  gap: 25px;
+}
+
+.card {
+  position: relative;
+  max-width: 380px;
+  height: auto;
+  /* margin: 0 auto; */
+  padding: 5px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: #fff;
+  background-color: #e32319;
+  box-shadow: 3px 4px 1px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-family: 'robotoc', sans-serif;
+}
+
+.card p {
+  display: none;
+}
+
+.card:hover p {
+  /* display: block; */
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* 
+.testimonials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-card {
+    position: relative;
+    max-width: 380px;
+    height: auto;
+    padding: 5px;
+    border-radius: 12px;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.testimonials {
+  width: 100% !important;
+  height: 100% !important;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.testimonial-card {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.testimonial img {
+  width: 257px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial h4 {
+  font-size: 1em;
+  color: #333;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #000;
+}
+
+/* BODY PART WOKROUT */
+
+.workoutBody {
+  display: block;
+  margin: 0 7.6rem;
+  margin-top: 5rem;
+}
+
+.headingTitlech1 {
+  text-align: center;
+  color: #e32319;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.workoutcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  border: 2px solid #434343;
+  border-collapse: collapse;
+}
+
+.ExerciseCard {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  justify-content: space-between;
+  border: 2px solid #434343;
+}
+
+.ExerciseCard .VideoContainer {
+  position: relative;
+  width: 100%;
+  max-width: 432px;
+  height: auto;
+  padding: 5px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.ExerciseCard video {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.exercise {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.exerciseDescription {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  padding: 12px 24px;
+  line-height: 32px;
+}
+
+#exerciseinfo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+
+}
+
+.exercise {
+  display: none;
+}
+
+
+/* --------------------media Queries------------------- */
+
+@media screen and (max-width: 680px) {
+  .workoutBody {
+    margin: 0 1rem;
+    margin-top: 5rem;
+  }
+
+  .ExerciseCard {
+    display: flex;
+    justify-content: center;
+  }
+
+  .VideoContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .exercise {
+    display: block;
+  }
+
+  #exerciseinfo {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .workoutBody {
+    margin: 0 3rem;
+    margin-top: 5rem;
+  }
+
+  .exerciseDescription {
+    display: none;
+    position: absolute;
+  }
+
+  .exerciseDescription.active {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    color: #f4f4f4;
+
+  }
+
+  .exercisecross {
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    right: 15px;
+    transition: all 1s ease;
+    border: 3px solid #e32319;
+    padding: 7px 11px;
+    border-radius: 50px;
+  }
+
+  .ExerciseHeading {
+    color: #e32319;
+    text-shadow: 1px 1px 2px #000;
+  }
+
+  .Exercise-Sub-heading {
+    color: blue;
+    text-shadow: 1px 1px 2px dodgerblue;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .workoutBody {
+    margin: 0 1rem;
+    margin-top: 5rem;
+  }
+
+  #exerciseinfo {
+    font-size: 7px;
+    padding: 2px 7px;
+  }
+
+  .ExerciseCard {
+    display: flex;
+    justify-content: center;
+  }
+
+  .VideoContainer {
+    width: 100%;
+  }
+
+  .ExerciseHeading {
+    font-size: 17px !important;
+  }
+
+  .Exercise-Sub-heading {
+    font-size: 13px !important;
+  }
+
+  .exerciseDescription.active {
+    padding: 2px 4px;
+  }
+
+  .exerciseDescription.active>P {
+    line-height: 2;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  .exerciseDescription.active>P {
+    line-height: 1.5;
+  }
+}
