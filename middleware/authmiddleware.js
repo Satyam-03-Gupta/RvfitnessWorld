@@ -11,14 +11,12 @@ const JWT_SECRET = 'kingshuk?0199';
 const checkAuth = async (req, res, next) => {
     const token = req.cookies?.token;
     if (!token) {
-        console.log("No token found in cookies");
         req.authuser = null;
         return next();
     }
     
     try {
-        const decoded = jwt.verify(token, JWT_SECRET);
-        
+        const decoded = jwt.verify(token, JWT_SECRET);        
         let user = await userModel.findOne({ email: decoded.email }); // Fixed variable shadowing
         if (!user) {
             console.log("User not found in database");

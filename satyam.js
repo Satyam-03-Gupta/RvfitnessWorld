@@ -10,6 +10,7 @@ const jwt = require('jsonwebtoken');
 const router = require('./routeHandler/route');
 const authRouter = require('./routeHandler/authroute');
 const authLogin = require('./routeHandler/loginroute');
+const authLogout = require('./routeHandler/logoutroute');
 const { checkAuth } = require('./middleware/authmiddleware');
 
 const JWT_SECRET = process.env.JWT_SECRET;
@@ -29,11 +30,11 @@ app.use('/userform', router);
 app.use('/auth',authRouter);
 app.use('/create', authRouter);
 app.use('/login', authLogin);
-app.use('/logout', authLogin);
+app.use('/logout', authLogout);
 
 
 app.get('/', checkAuth, (req, res) => {
-    res.render('index', { user: req.user || null });
+    res.render('index', { user: req.authuser || null });
 });
 
 app.get('/createuser', (req, res) => {

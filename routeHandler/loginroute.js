@@ -13,10 +13,6 @@ router.post('/', async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        if (!email || !password) {
-            return res.status(400).send("Email and password are required");
-        }
-
         let user = await authModel.findOne({ email });
         if (!user) return res.status(400).send("User not found");
 
@@ -24,7 +20,7 @@ router.post('/', async (req, res) => {
         if (result) {
             let token = jwt.sign({ email: user.email, username: user.username }, JWT_SECRET, { expiresIn: "7d" });
             res.cookie("token", token, { httpOnly: true });
-            res.redirect('/');
+            res.redirect('/'); 
         } else {
             res.status(400).send("Incorrect email or password");
         }
@@ -34,11 +30,6 @@ router.post('/', async (req, res) => {
     }
 });
 
-// Logout Route
-router.post("/logout", (req, res) => {
-    res.clearCookie("token");
-    res.redirect("/login");
-});
 
 // Example usage of checkAuth middleware
 router.get('/protected', checkAuth, (req, res) => {
